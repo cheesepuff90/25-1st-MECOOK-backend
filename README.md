@@ -1,50 +1,63 @@
-# PEACOCK Clone Project (MECOOK)
-  e-commerce사이트인 peacock 웹사이트 클론.
+# PEACOCK Clone (MECOOK)
 
-## 개발 기간 / 개발 인원
-  개발 기간: 2021-10-4 ~ 2021-10-15
-  <br>
-  개발 인원: 김도훈(**백엔드**), 김민찬(**백엔드**)
-  정민지(**프론트엔트**), 김용현(**프론트엔트**), 손호영(**프론트엔트**), 서고운(**프론트엔트**)
+The **PEACOCK Clone (MECOOK)** project is an e-commerce web application inspired by the PEACOCK online marketplace. Built by a six-member team, it replicates essential e-commerce features including product browsing, cart management, reviews, and order processing.
+
+## Project Overview
+
+The goal of this project was to create a full-stack e-commerce platform that provides a seamless shopping experience for users while giving the team hands-on experience in building scalable web applications. Unlike static showcase sites, PEACOCK Clone integrates real-time product management, user authentication, and shopping workflows.
+
+## Tech Stack
+
+- **Backend:** Python, Django, MySQL  
+- **Frontend:** HTML, CSS, JavaScript  
+- **Deployment:** AWS EC2, RDS  
+- **Collaboration Tools:** Git, GitHub, Slack, Trello  
+
+## Agile Methodology
+
+This project was managed using the Agile methodology. The team worked in short sprints with regular planning, code reviews, and retrospectives, ensuring continuous integration of features and effective collaboration across backend and frontend developers.
+
+## Features
+
+- **User Accounts**: Signup, login, and authentication  
+- **Product Management**: Browse product lists, search, filter, and sort items  
+- **Product Details**: View individual product details with associated reviews  
+- **Shopping Cart**: Add, view, and delete cart items  
+- **Wishlist (Favorites)**: Save and remove favorite products  
+- **Reviews**: Create, view, and delete product reviews  
+- **Orders**: Place orders with integrated point deduction system  
+- **REST API**: Fully documented API endpoints for each feature  
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd peacock-clone
+
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # Mac/Linux
+   venv\Scripts\activate      # Windows
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+4. Configure the MySQL database in your Django settings file and run migrations:
+   ```bash
+   python manage.py migrate
+
+5. Start the development server:
+   ```bash
+   python manage.py runserver
+
+6. Open your browser and navigate to:
+   ```bash
+   http://127.0.0.1:8000
 
 ## Demo
 - [Demo](https://www.youtube.com/watch?v=p1O8gjB2X7I)
-  
-## DB modeling
-  
-## Technologies
-* Python
-* Django
-* MySQL
-* AWS EC2, RDS
-* Git, Github
-* Slack, Trello
 
-## Features
-**김민찬**
-* 상품 리스트 API (``GET``)
-* 상품 상세보기 API (``GET``)
-* 상품 리스트 검색, 정렬 API(``GET``)
-* 로그인 시 좋아요 여부 표시 (``GET``)
-* 전체 URL 쿼리 파라미터 사용
-
-
-**김도훈**
-* 로그인, 회원가입 API (``POST``)
-* 장바구니 상품 추가, 조회, 삭제 API (``POST``, ``GET``, ``DELETE``)
-* 상품 리뷰 생성, 조회, 삭제 API (``POST``, ``GET``, ``DELETE``)
-* 상품 즐겨찾기(좋아요) 생성, 삭제 API (``POST``)
-* 주문 (포인트 차감 기능만) API (``POST``, ``GET``)
-
-## Endpoint
-* ``POST``/user/signup (회원가입)
-* ``POST``/user/login (로그인)
-* ``POST``/cart (장바구니 넣기)
-* ``GET``/cart (장바구니 조회)
-* ``DELETE``/cart/<int:cart_id> (장바구니 삭제)
-* ``POST``/review/comment (리뷰 남길때)
-* ``GET``/review/list?product={product_id}&limit={int}&offset={int} (리뷰 가져올때)
-* ``DELETE``/review/ccomment<int:review_id> (리뷰 삭제할때)
-* ``POST``/like/user (좋아요 누를때)
-* ``GET``/order (주문 누르기후 포인트 차감)
-* ``GET``/product/?$product=${상품ID}&category=${카테고리ID}&detail=${상세보기표시여부(1,0}&search=${검색 단어1}&search=${검색 단어2}&sort=${priority|id|name 정렬기준} -> query Param의 모든 조건은 선택사항임
+   

@@ -32,7 +32,7 @@ This project was managed using the Agile methodology. The team worked in short s
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/cheesepuff90/25-1st-MECOOK-backend/tree/main>
    cd peacock-clone
 
 2. Create and activate a virtual environment:
